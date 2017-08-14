@@ -11,20 +11,29 @@
 	<p>密码: <%= user.paw %></p>
   <p>权限等级:<%= user.tocken %></p>
   <script>
+    //用户数据请求
       $.ajax({
         url:"http://127.0.0.1:3000/userapi",
         type:"get",
-        dataType:"jsonp",
-        callback:"?",
+        dataType:"json",
         success:function(data){
           console.log(data);
         }
       })
-     $.ajax({
+      //任务请求
+       $.ajax({
         url:"http://127.0.0.1:3000/taskapi",
         type:"get",
-        dataType:"jsonp",
-        callback:"?",
+        dataType:"json",
+        success:function(data){
+          console.log(data);
+        }
+      })
+      //日报请求
+       $.ajax({
+        url:"http://127.0.0.1:3000/reportapi",
+        type:"get",
+        dataType:"json",
         success:function(data){
           console.log(data);
         }
