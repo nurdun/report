@@ -3,11 +3,32 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>名字: <%= user.name %></p>
 	<p>密码: <%= user.paw %></p>
-	<p>权限等级:<%= user.tocken %></p>
+  <p>权限等级:<%= user.tocken %></p>
+  <script>
+      $.ajax({
+        url:"http://127.0.0.1:3000/userapi",
+        type:"get",
+        dataType:"jsonp",
+        callback:"?",
+        success:function(data){
+          console.log(data);
+        }
+      })
+     $.ajax({
+        url:"http://127.0.0.1:3000/taskapi",
+        type:"get",
+        dataType:"jsonp",
+        callback:"?",
+        success:function(data){
+          console.log(data);
+        }
+      })
+  </script>
   </body>
 </html>
