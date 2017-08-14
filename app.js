@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-
+var userapi = require('./routes/userapi');
+var taskapi = require('./routes/taskapi');
 var app = express();
 
 // view engine setup
@@ -24,6 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+//api接口文件
+app.use('/userapi', userapi);
+//任务数据接口
+app.use('/taskapi', taskapi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

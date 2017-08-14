@@ -3,14 +3,14 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
         
-var conn = mongoose.connect('mongodb://127.0.0.1:27017/report',{useMongoClient: true});
+var userConnect = mongoose.connect('mongodb://127.0.0.1:27017/report',{useMongoClient: true});
 var User = new mongoose.Schema({
     name: String,
     paw: String,
     tocken: Number
 });
 
-var userdata = conn.model('User', User);
+var userdata = userConnect.model('User', User);
 
 module.exports = userdata;
 
