@@ -7,7 +7,8 @@ mongoose.Promise = global.Promise;
  //用户列表接口
 router.get('/', function(req, res) {
     res.header('Access-Control-Allow-Origin', '*');
-    userdata.findOne({name:"nurdun"}, function (err, user) {
+    var name = req.params;
+    userdata.findOne({name:name}, function (err, user) {
         console.log(user);
         if (req.query && req.query.callback) {
         //console.log(params.query.callback);

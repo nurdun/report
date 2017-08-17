@@ -15,11 +15,19 @@ var taskList = new mongoose.Schema({
         updatePerson:String
     },
     taskTypeId:Number,
-    parentTaskId:Number,
+    parentTaskId:String,
     taskStateId:Number,
     taskleader:String,
     taskJoiner:Array,
-    taskPoint:String
+    taskTarget:{
+        targetTitle:String,
+        targetDetail:String
+    },
+    taskResultTest:{
+        testPoint:String,
+        testTemplate:String,
+        testPlanTime:Date
+    }
 },{collection:"taskData"}
 );
 

@@ -5,14 +5,15 @@ mongoose.Promise = global.Promise;
         
 var reportListConn = mongoose.connect('mongodb://127.0.0.1:27017/report',{useMongoClient: true});
 var reportList = new mongoose.Schema({
-    reportBelongId: Number,
+    reportBelongId: String,
     reportDetail: {
         task_id:String,
         helper:String,
         spendTime:String,
         Detail:String,
         doc:Boolean
-    }
+    },
+    reportAttrType:String
 },{collection:"report"}
 );
 

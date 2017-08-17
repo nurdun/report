@@ -38,6 +38,43 @@
           console.log(data);
         }
       })
+      //考核结果请求
+       $.ajax({
+        url:"http://127.0.0.1:3000/testResultapi",
+        type:"get",
+        dataType:"json",
+        success:function(data){
+          console.log(data);
+        }
+      })
+      // //考核结果请求
+      //  $.ajax({
+      //   url:"http://127.0.0.1:3000/testResultapi",
+      //   type:"get",
+      //   dataType:"json",
+      //   success:function(data){
+      //     console.log(data);
+      //   }
+      // })
+      //任务类型请求
+       $.ajax({
+        url:"http://127.0.0.1:3000/taskTypeapi",
+        type:"get",
+        dataType:"json",
+        data:{"taskId":"5991667d776a6f27f4ba579c"},
+        success:function(data){
+          console.log(data);
+        }
+      })
+       //任务状态请求
+       $.ajax({
+        url:"http://127.0.0.1:3000/taskStateapi",
+        type:"get",
+        dataType:"json",
+        success:function(data){
+          console.log(data);
+        }
+      })
   </script>
   </body>
 </html>

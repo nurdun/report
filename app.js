@@ -10,6 +10,9 @@ var users = require('./routes/users');
 var userapi = require('./routes/userapi');
 var taskapi = require('./routes/taskapi');
 var reportapi = require('./routes/reportapi');
+var testResultapi = require('./routes/testResultapi');
+var taskStateapi = require('./routes/taskStateapi');
+var taskTypeapi = require('./routes/taskTypeapi');
 var app = express();
 
 // view engine setup
@@ -32,6 +35,12 @@ app.use('/userapi', userapi);
 app.use('/taskapi', taskapi);
 //日报数据接口
 app.use('/reportapi', reportapi);
+//考核结果数据接口
+app.use('/testResultapi', testResultapi);
+//任务状态接口
+app.use('/taskStateapi', taskStateapi);
+//任务类型接口
+app.use('/taskTypeapi', taskTypeapi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
