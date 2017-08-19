@@ -14,7 +14,8 @@ var testResultapi = require('./routes/testResultapi');
 var taskStateapi = require('./routes/taskStateapi');
 var taskTypeapi = require('./routes/taskTypeapi');
 var app = express();
-
+userapi(app);
+taskapi(app);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -29,18 +30,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
 //用户数据接口
-app.use('/userapi', userapi);
+userapi(app);
 //任务数据接口
-app.use('/taskapi', taskapi);
+taskapi(app);
 //日报数据接口
-app.use('/reportapi', reportapi);
+reportapi(app);
 //考核结果数据接口
-app.use('/testResultapi', testResultapi);
+testResultapi(app);
 //任务状态接口
-app.use('/taskStateapi', taskStateapi);
+taskStateapi(app);
 //任务类型接口
-app.use('/taskTypeapi', taskTypeapi);
+taskTypeapi(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
