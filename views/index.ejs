@@ -13,36 +13,78 @@
   <script>
     //用户数据请求
       $.ajax({
-        url:"http://127.0.0.1:3000/userapi",
+        url:"http://127.0.0.1:3000/users",
         type:"get",
         dataType:"json",
+        success:function(data){
+          console.log(data);
+        }
+      })
+      $.ajax({
+        url:"http://127.0.0.1:3000/login",
+        type:"get",
+        dataType:"json",
+        data:{
+          name:"nurdun",
+          paw:"nurdun123456"
+        },
         success:function(data){
           console.log(data);
         }
       })
       //任务请求
        $.ajax({
-        url:"http://127.0.0.1:3000/taskapi",
+        url:"http://127.0.0.1:3000/tasks",
         type:"get",
         dataType:"json",
+        success:function(data){
+          console.log(data);
+        }
+      })
+       //任务请求
+       $.ajax({
+        url:"http://127.0.0.1:3000/taskdetail",
+        type:"get",
+        dataType:"json",
+        data:{
+          "task_id":"5991667d776a6f27f4ba579c"
+        },
         success:function(data){
           console.log(data);
         }
       })
       //日报请求
        $.ajax({
-        url:"http://127.0.0.1:3000/reportapi",
+        url:"http://127.0.0.1:3000/reports",
         type:"get",
         dataType:"json",
+        data:{
+          "reportBelongId":"598eafa9178ab1abe832e841"
+        },
+        success:function(data){
+          console.log(data);
+        }
+      })
+      $.ajax({
+        url:"http://127.0.0.1:3000/reportdetail",
+        type:"get",
+        dataType:"json",
+        data:{
+          "report_id":"599190c8776a6f27f4ba579d"
+        },
         success:function(data){
           console.log(data);
         }
       })
       //考核结果请求
        $.ajax({
-        url:"http://127.0.0.1:3000/testResultapi",
+        url:"http://127.0.0.1:3000/result",
         type:"get",
         dataType:"json",
+        data:{
+          "userId":"598eafa9178ab1abe832e841",
+          "taskId":"5991667d776a6f27f4ba579c"
+        },
         success:function(data){
           console.log(data);
         }
@@ -58,7 +100,7 @@
       // })
       //任务类型请求
        $.ajax({
-        url:"http://127.0.0.1:3000/taskTypeapi",
+        url:"http://127.0.0.1:3000/tasktype",
         type:"get",
         dataType:"json",
         data:{"taskId":"5991667d776a6f27f4ba579c"},
@@ -68,7 +110,7 @@
       })
        //任务状态请求
        $.ajax({
-        url:"http://127.0.0.1:3000/taskStateapi",
+        url:"http://127.0.0.1:3000/taskstate",
         type:"get",
         dataType:"json",
         success:function(data){

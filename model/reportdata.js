@@ -8,10 +8,11 @@ var reportList = new mongoose.Schema({
     reportBelongId: String,
     reportDetail: {
         task_id:String,
-        helper:String,
+        helper:Array,
         spendTime:String,
         Detail:String,
-        doc:Boolean
+        doc:Boolean,
+        createTime:Date
     },
     reportAttrType:String
 },{collection:"report"}

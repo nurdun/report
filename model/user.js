@@ -7,7 +7,7 @@ var userConnect = mongoose.connect('mongodb://127.0.0.1:27017/report',{useMongoC
 var User = new mongoose.Schema({
     name: String,
     paw: String,
-    station:Number,
+    station:String,
     tocken: Number,
     meta:Date
 });

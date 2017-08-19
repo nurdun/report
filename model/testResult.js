@@ -6,6 +6,7 @@ mongoose.Promise = global.Promise;
 var resultConn = mongoose.connect('mongodb://127.0.0.1:27017/report',{useMongoClient: true});
 var testResult = new mongoose.Schema({
     userId: String,
+    taskId:String,
     testLeader:String,
     testTime:Date,
     testcomment:String,
