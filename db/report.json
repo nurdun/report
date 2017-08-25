@@ -1,0 +1,1 @@
+{"_id":{"$oid":"599190c8776a6f27f4ba579d"},"reportBelongId":"598eafa9178ab1abe832e841","reportDetail":{"task_id":"5991667d776a6f27f4ba579c","helper":["曹磊"],"spendTime":"2小时","Detail":"这是任务详细情况","doc":false,"createTime":{"$date":"2017-08-19T00:00:00.000Z"}},"reportAttrType":"突发性任务"}

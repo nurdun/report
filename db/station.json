@@ -1,0 +1,1 @@
+{"_id":{"$oid":"599aaa45bec7da1200374c52"},"stationName":"这是岗位名称","dept":"这是所属部门","stationRank":"C","leader":"这是直属上司","aboutstation":"这是岗位概要","workdetail":"这是工作内容","stationclaim":"岗位工作经验要求","education":"学历要求","skill":"技能要求","workspace":"主要工作场所","worktimefeature":"工作时间特征"}
