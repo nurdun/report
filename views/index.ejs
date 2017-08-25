@@ -4,12 +4,21 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script> -->
   </head>
   <body>
     <h1><%= title %></h1>
     <p>名字: <%= user.name %></p>
 	<p>密码: <%= user.paw %></p>
   <p>权限等级:<%= user.tocken %></p>
+  <form action="http://127.0.0.1:3000/createuser" method="post">
+   <input type="text" name="name" />
+   <input type="text" name="paw" />
+   <input type="text" name="station" />
+   <input type="text" name="tocken" />
+   <input type="text" name="meta" />
+   <input type="submit"/>
+  </form>
   <script>
     //用户数据请求
       $.ajax({
@@ -117,6 +126,23 @@
           console.log(data);
         }
       })
+
+      fetch("http://127.0.0.1:3000/taskstate",{
+        method:"get",
+        data:{"taskId":"5991667d776a6f27f4ba579c"}
+      }).then(response=>response.json())
+        .then(data=>{
+          console.log(data);
+        })
+
+        //岗位数据接口
+        fetch("http://127.0.0.1:3000/stations",{
+          method:"get"
+        }).then(res=>res.json())
+          .then(data=>{
+            alert(data);
+            console.log(data);
+          })
   </script>
   </body>
 </html>
