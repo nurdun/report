@@ -57,7 +57,6 @@ const routes = (app) => {
             name: req.body.name,
             paw: req.body.paw,
             station:req.body.station,
-            tocken:req.body.tocken,
             meta:req.body.meta
         }]
         userdata.create(newUser, (err) => {
@@ -99,7 +98,6 @@ const routes = (app) => {
                 name: req.body.name,
                 paw: req.body.paw,
                 station:req.body.station,
-                tocken:req.body.tocken,
                 meta:req.body.meta
             }}
         userdata.update(condiction, query, (err, result) => {

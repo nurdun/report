@@ -13,6 +13,7 @@ var reportapi = require('./routes/reportapi');
 var testResultapi = require('./routes/testResultapi');
 var taskStateapi = require('./routes/taskStateapi');
 var taskTypeapi = require('./routes/taskTypeapi');
+var stationapi = require('./routes/stationapi');
 var app = express();
 userapi(app);
 taskapi(app);
@@ -43,6 +44,8 @@ testResultapi(app);
 taskStateapi(app);
 //任务类型接口
 taskTypeapi(app);
+//岗位信息接口
+stationapi(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

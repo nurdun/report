@@ -8,7 +8,6 @@ var User = new mongoose.Schema({
     name: String,
     paw: String,
     station:String,
-    tocken: Number,
     meta:Date
 });
 
